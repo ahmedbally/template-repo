@@ -1,0 +1,232 @@
+{
+  "version": "1.0.0",
+  "theme_name": "Theme One",
+  "repo_url": "https://github.com/SallaApp/theme-one",
+  "features": [
+    "mega-menu",
+    "fonts",
+    "color",
+    "breadcrumb",
+    "unite-cards-height",
+    "component-featured-products",
+    "component-fixed-banner",
+    "component-fixed-products",
+    "component-photos-slider",
+    "component-products-slider",
+    "component-parallax-background",
+    "component-random-testimonials",
+    "component-testimonials",
+    "component-square-photos",
+    "component-store-features",
+    "component-youtube"
+  ],
+  "settings": [
+    {
+      "type": "boolean",
+      "label": "شريط علوي داكن",
+      "id": "topnav_is_dark",
+      "format": "switch",
+      "selected": false
+    }
+  ],
+  "components": [
+    {
+      "name": "enhanced-slider",
+      "title": "صور متحركة (محسنة)",
+      "icon": "sicon-image-carousel",
+      "path": "home.enhanced-slider",
+      "fields": [
+        {
+          "id": "is_wide",
+          "type": "boolean",
+          "text": "ملئ الشاشة",
+          "format": "switch",
+          "selected": true
+        },
+        {
+          "id": "slides",
+          "type": "collection",
+          "format": "collection",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 10,
+          "label": "قائمة الصور",
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "label": "عنوان رئيسي (إختياري)"
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص توضيحي (إختياري)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "main-links",
+      "title": "روابط سريعة",
+      "icon": "sicon-layout-grid-rearrange",
+      "path": "home.main-links",
+      "fields": [
+        {
+          "id": "title",
+          "type": "string",
+          "label": "العنوان",
+          "placeholder": "أدخل العنوان هنا...",
+          "required": false
+        },
+        {
+          "id": "links",
+          "type": "collection",
+          "format": "collection",
+          "required": true,
+          "minLength": 3,
+          "maxLength": 6,
+          "label": "الأيقونات والروابط",
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "string",
+              "label": "أيقونة معبرة عن الرابط",
+              "placeholder": "TODO:: Icons List, for now just add icon class ex: sicon-star-o",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "placeholder": "أدخل عنوان الرابط هنا...",
+              "label": "عنوان الرابط",
+              "required": true
+            },
+            {
+              "id": "url",
+              "type": "string",
+              "format": "url",
+              "label": "الرابط",
+              "placeholder": "أدخل الرابط هنا...",
+              "inputType": "url",
+              "required": true
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "label": "دمج مع التصميم السابق",
+          "id": "merge_with_top_component",
+          "format": "switch",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "name": "brands",
+      "title": "الماركات التجارية",
+      "icon": "sicon-award-ribbon",
+      "path": "home.brands",
+      "fields": [
+        {
+          "id": "brands",
+          "type": "items",
+          "label": "العلامات التجارية",
+          "format": "dropdown-list",
+          "multichoice": true,
+          "required": true,
+          "source": "Brands"
+        }
+      ]
+    },
+    {
+      "name": "slider-products-with-header",
+      "title": "منتجات متحركة مع خلفية",
+      "icon": "sicon-list-play",
+      "path": "home.slider-products-with-header",
+      "fields": [
+        {
+          "id": "background",
+          "type": "string",
+          "format": "image"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "label": "عنوان رئيسي (إختياري)"
+        },
+        {
+          "id": "description",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص توضيحي (إختياري)"
+        },
+        {
+          "id": "products",
+          "type": "items",
+          "icon": "sicon-list",
+          "label": "المنتجات",
+          "format": "dropdown-list",
+          "required": true,
+          "source": "Products",
+          "multichoice": true,
+          "maxLength": 8
+        }
+      ]
+    },
+    {
+      "name": "enhanced-square-banners",
+      "title": "صور ثابتة (محسنة)",
+      "icon": "sicon-image",
+      "path": "home.enhanced-square-images",
+      "fields": [
+        {
+          "id": "banners",
+          "type": "collection",
+          "format": "collection",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 5,
+          "label": "قائمة الصور",
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "required": true
+            },
+            {
+              "id": "url",
+              "type": "string",
+              "format": "url",
+              "label": "الرابط",
+              "placeholder": "أدخل الرابط هنا...",
+              "inputType": "url",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "label": "عنوان رئيسي (إختياري)"
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص توضيحي (إختياري)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "support_url": "https://salla.dev"
+}
