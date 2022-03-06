@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "theme_name": "Theme One",
-  "repo_url": "https://github.com/SallaApp/theme-one",
+  "repo_url": "https://github.com/Test/test",
   "features": [
     "mega-menu",
     "fonts",
@@ -367,5 +367,5 @@
       ]
     }
   ],
-  "support_url": "https://salla.dev"
+  "support_url": "https://test.test"
 }
