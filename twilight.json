@@ -1,7 +1,14 @@
 {
   "version": "1.0.0",
-  "theme_name": "Theme One",
-  "repo_url": "https://github.com/SallaApp/theme-one",
+  "name": {
+      "ar": "Theme One",
+      "en": "Theme One"
+  },
+  "description": {
+      "ar": "Theme One",
+      "en": "Theme One"
+  },
+  "repository": "https://github.com/SallaApp/theme-one",
   "features": [
     "mega-menu",
     "fonts",
